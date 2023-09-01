@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/static/'
+MEDIA_URL = '/media/'
 
 CORS_ORIGIN_WHITELIST = [
    'http://localhost:3000'
