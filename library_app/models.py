@@ -11,7 +11,7 @@ def author_upload_to(instance, filename):
 class Author(models.Model):
     name = models.CharField(max_length=400, unique=True)
     about = models.TextField()
-    author_image = models.ImageField(upload_to=author_upload_to)
+    author_image = models.ImageField(upload_to='/upload')
 
     def __str__(self):
         return self.name 
