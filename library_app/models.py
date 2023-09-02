@@ -4,7 +4,7 @@ def book_upload_to(instance, filename):
     return 'book/{filename}'.format(filename=filename)
 
 def author_upload_to(instance, filename):
-    return '{filename}'.format(filename=filename)
+    return 'static/{filename}'.format(filename=filename)
 
 
 
