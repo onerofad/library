@@ -49,7 +49,7 @@ class Book(models.Model):
     book_dim = models.CharField(max_length=200)
     book_isbn10 = models.CharField(max_length=400, default='Null')
     book_isbn13 = models.CharField(max_length=400, default='Null')
-    # book_image = models.ImageField(upload_to=book_upload_to, unique=True)
+    book_image = models.TextField(default="")
     author = models.ForeignKey(Author, on_delete=models.CASCADE, to_field='name')
     book_issued = models.BooleanField(default=False)  
 
