@@ -19,7 +19,7 @@ class StudentSerializer(serializers.ModelSerializer):
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ('id','name', 'pub_date', 'no_pages', 'book_lang', 'book_dim', 'book_image', 'book_isbn10', 'book_isbn13', 'author', 'book_issued')
+        fields = ('id','name', 'pub_date', 'no_pages', 'book_lang', 'book_dim', 'book_url', 'book_isbn10', 'book_isbn13', 'author', 'book_issued')
 
 class BookIssuedSerializer(serializers.ModelSerializer):
     class Meta:
