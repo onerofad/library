@@ -1,3 +1,4 @@
+from django.core.files.storage import FileSystemStorage
 from django.db import models
 
 def book_upload_to(instance, filename):
@@ -6,12 +7,13 @@ def book_upload_to(instance, filename):
 def author_upload_to(instance, filename):
     return 'library_app/media/author/{filename}'.format(filename=filename)
 
+fs = FileSystemStorage(location = "/media/authors")
 
 
 class Author(models.Model):
     name = models.CharField(max_length=400, unique=True)
     about = models.TextField()
-    author_image = models.ImageField(upload_to='/upload')
+    author_image = models.ImageField(storage=fs)
 
     def __str__(self):
         return self.name 
