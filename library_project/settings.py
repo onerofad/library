@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qwa#!zbtili6(gk*tzy0tcoh7-&+efre5d9-1bthwbd7ll((4d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://library-frontend-zeta.vercel.app']
 
 
 # Application definition
@@ -143,5 +143,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CORS_ORIGIN_WHITELIST = [
-   'http://localhost:3000'
+   'http://localhost:3000',
+   'https://library-frontend-zeta.vercel.app'
 ]
