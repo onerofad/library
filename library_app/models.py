@@ -7,7 +7,7 @@ def book_upload_to(instance, filename):
 def author_upload_to(instance, filename):
     return 'library_app/media/author/{filename}'.format(filename=filename)
 
-fs = FileSystemStorage(location = "/media/authors")
+fs = FileSystemStorage(location = "authors/")
 
 
 class Author(models.Model):
