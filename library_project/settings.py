@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     # Third PArty App
     'rest_framework',
     'corsheaders',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +148,10 @@ CORS_ORIGIN_WHITELIST = [
    'http://localhost:3000',
    'https://library-frontend-zeta.vercel.app'
 ]
+
+cloudinary.config( 
+  cloud_name = "du3ck2joa", 
+  api_key = "577678585426578", 
+  api_secret = "RF5HIq7u8jyXzZG3MEjt3WEuA3k" 
+)
+

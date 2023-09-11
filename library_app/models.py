@@ -1,5 +1,6 @@
 from django.core.files.storage import FileSystemStorage
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 def book_upload_to(instance, filename):
     return 'book/{filename}'.format(filename=filename)
@@ -13,7 +14,7 @@ fs = FileSystemStorage(location = "authors")
 class Author(models.Model):
     name = models.CharField(max_length=400, unique=True)
     about = models.TextField()
-    # author_image = models.ImageField(storage=fs)
+    author_image = CloudinaryField("image")
 
     def __str__(self):
         return self.name 
