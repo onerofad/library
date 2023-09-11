@@ -50,7 +50,7 @@ class Book(models.Model):
     book_dim = models.CharField(max_length=200)
     book_isbn10 = models.CharField(max_length=400, default='Null')
     book_isbn13 = models.CharField(max_length=400, default='Null')
-    book_url = models.TextField(default="null")
+    book_image = CloudinaryField("image")
     author = models.ForeignKey(Author, on_delete=models.CASCADE, to_field='name')
     book_issued = models.BooleanField(default=False)  
 
